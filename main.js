@@ -1,4 +1,4 @@
-// byta färg på sidan (mörk backgrund med ljus text, ljus backgrund med mörk text)
+// darkmood/Lightmood
 let darkMode = document.querySelector("#change-background");
 let questionOne = document.querySelector("#question1X3");
 let allQuestion = document.querySelector("#quiz");
@@ -7,13 +7,25 @@ darkMode.addEventListener("click", () => {
   if (body.style.background === "black") {
     body.style.background = "white";
     body.style.color = "black";
+    p1.style.color = "black";
+    p2.style.color = "black";
+    p3.style.color = "black";
+    p4.style.color = "black";
+    p5.style.color = "black";
+    p6.style.color = "black";
+    p7.style.color = "black";
   } else {
     body.style.background = "black";
     body.style.color = "white";
+    p1.style.color = "green";
+    p2.style.color = "green";
+    p3.style.color = "green";
+    p4.style.color = "green";
+    p5.style.color = "green";
+    p6.style.color = "green";
+    p7.style.color = "green";
   }
 });
-// body.style.background = "#131E3A";
-// body.style.color ="#D9DDDC";
 
 let button = document.createElement("button");
 button.innerHTML = "Get reslut!";
@@ -53,4 +65,15 @@ button.addEventListener("click", () => {
   } else {
     totalScore.style.color = "red";
   }
+});
+
+//function and button to reload the page
+
+let reload = document.querySelector("#reload");
+function reloadPage() {
+  window.location.reload();
+}
+
+reload.addEventListener("click", () => {
+  reloadPage();
 });
